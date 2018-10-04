@@ -1,0 +1,133 @@
+{
+	"name": "chatApp",
+	"projectId": "82e3dfa1-8b95-45f5-b73a-74637b02c9c2",
+	"region": "us-east-1",
+	"state": "NORMAL",
+	"createdDate": "2018-10-04T06:30:02.624Z",
+	"lastUpdatedDate": "2018-10-04T18:55:33.391Z",
+	"consoleUrl": "https://console.aws.amazon.com/mobilehub/home#/82e3dfa1-8b95-45f5-b73a-74637b02c9c2/build",
+	"resources": [
+		{
+			"type": "AWS::Pinpoint::AnalyticsApplication",
+			"name": "chatapp_MobileHub",
+			"arn": "2852d28940d3456180abc490253d42b5",
+			"feature": "analytics",
+			"attributes": {
+				"lastUpdateRequestID": "3081c0ad-20a4-481d-aa54-914ed2bd37c2"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "chatapp_mobileanalytics_MOBILEHUB_1762768659",
+			"arn": null,
+			"feature": "analytics",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "12720aec-e056-49b7-80eb-07ca642d76f4",
+				"role": "chatapp_auth_MOBILEHUB_1762768659"
+			}
+		},
+		{
+			"type": "AWS::Cognito::IdentityPool",
+			"name": "chatapp_MOBILEHUB_1762768659",
+			"arn": "us-east-1:43b74329-ded5-45eb-baef-e3e657c55571",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "12720aec-e056-49b7-80eb-07ca642d76f4",
+				"poolid": "us-east-1:43b74329-ded5-45eb-baef-e3e657c55571",
+				"roleARNs": "arn:aws:iam::343728352001:role/chatapp_auth_MOBILEHUB_1762768659"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "chatapp_smsverification_MOBILEHUB_1762768659",
+			"arn": "arn:aws:iam::343728352001:role/service-role/chatapp_smsverification_MOBILEHUB_1762768659",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "12720aec-e056-49b7-80eb-07ca642d76f4",
+				"user-pools-role-key": "user-pools-execution-role"
+			}
+		},
+		{
+			"type": "AWS::Cognito::UserPool",
+			"name": "chatapp_userpool_MOBILEHUB_1762768659",
+			"arn": "us-east-1_Tzcu4gwzZ",
+			"feature": "user-signin",
+			"attributes": {
+				"alias-attributes": "[\"email\"]",
+				"lastUpdateRequestID": "12720aec-e056-49b7-80eb-07ca642d76f4",
+				"mfa-configuration": "OFF",
+				"password-policy": "{\"minimumLength\":8,\"requireUppercase\":true,\"requireLowercase\":true,\"requireNumbers\":true,\"requireSymbols\":true}",
+				"region": "us-east-1",
+				"user-pools-client-id": "...redacted_-1905684443...",
+				"user-pools-client-secret": "...redacted_-674276446...",
+				"user-pools-id": "us-east-1_Tzcu4gwzZ",
+				"user-pools-web-client-id": "2gr46dsqefb1a0v3vqq0ah0kjq"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "chatapp_auth_MOBILEHUB_1762768659",
+			"arn": "arn:aws:iam::343728352001:role/chatapp_auth_MOBILEHUB_1762768659",
+			"feature": "user-signin",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "12720aec-e056-49b7-80eb-07ca642d76f4"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "chatapp-hosting-mobilehub-1762768659",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"lastUpdateRequestID": "3081c0ad-20a4-481d-aa54-914ed2bd37c2",
+				"region": "us-east-1",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/chatapp-hosting-mobilehub-1762768659",
+				"s3-bucket-website-url": "https://s3.amazonaws.com/chatapp-hosting-mobilehub-1762768659"
+			}
+		},
+		{
+			"type": "AWS::CloudFront::Distribution",
+			"name": "d2ezmfg01h1sc7.cloudfront.net",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"id": "E18HIF0R8BVB0B",
+				"lastUpdateRequestID": "3081c0ad-20a4-481d-aa54-914ed2bd37c2"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "chatapp_hosting_MOBILEHUB_1762768659",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"authType": "authenticated",
+				"lastUpdateRequestID": "12720aec-e056-49b7-80eb-07ca642d76f4",
+				"role": "chatapp_auth_MOBILEHUB_1762768659"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "chatapp-deployments-mobilehub-1762768659",
+			"arn": null,
+			"feature": "common",
+			"attributes": {
+				"region": "us-east-1",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/chatapp-deployments-mobilehub-1762768659"
+			}
+		},
+		{
+			"type": "AWS::CloudFormation::Stack",
+			"name": "Development",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"primary": "true",
+				"region": "us-east-1",
+				"stateSummary": "NOT_YET_DEPLOYED"
+			}
+		}
+	]
+}
